@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="brand">
+            <img src="asset/logo.png" alt="logo">
+        </div>
+
+        <nav id="navbar-nav">
+            <div class="close">
+                <img src="asset/silang.png" alt="" class="close-icon">
+            </div>
+                <a href="#home">Home</a>
+                <a href="#product">Product</a>
+                <a href="#contact">Contact</a>
+        </nav>
+        <div id="hamburger-menu">
+            <img src="asset/menu.png" alt="" class="menu-icon">
+        </div>
+            
+        </header>
+
+        <!-- <section>
+            <div id="animated-text3"></div>
+        </section> -->
+
+        <main id="home">
+            <!-- <div id="animated-text1"></div>
+            <div id="animated-text2"></div> -->
+            <div class="slide-img">
+                <img src="asset/lptop.png" alt="">
+                <div class="slide-text">
+                    <h2>Laptop Second Murah Se Kanor!</h2>
+                    <p>Mau laptop second murah tapi tetap berkualitas? Disini Tempatnya!, kami menawarkan pilihan terbaik dengan harga bersaing, garansi, dan kondisi fisik hingga <span class="t-a">95%</span></p>
+                </div>
+            </div>
+        </main>
+
+        <section class="slide-container">
+            <div class="slide slide-1">
+                <video src="asset/lenovo-laptop-thinkpad-series-feature-1-privacy-cover-video-v2.mp4" muted loop autoplay></video>
+            </div>
+            <div class="slide slide-2">
+                <video src="asset/lenovo-laptop-thinkpad-series-feature-1-cool-and-quiet-video-v2.mp4" muted loop autoplay></video>
+            </div>
+            <div class="slide slide-3">
+                <video src="asset/lenovo-laptop-thinkpad-series-feature-1-360-hinge-video-v2.mp4" muted loop autoplay></video>
+            </div>
+            <div class="nav">
+                <button class="prev"><<</button>
+                <button class="next">>></button>
+            </div>
+        </section>
+    
+
+        <section class="ads-product">
+            <div class="basa-basi">
+                <h3>BEST SELLER <span>2025</span></h3>
+                <p>Laptop Second Recomended Buat Jangka Panjang</p>
+            </div>
+
+        <div class="ads-contains">
+            <div class="ads-content">
+                <img src="asset/Lenovo ThinkPad X1 Carbon.png" alt="">
+                <div class="desk">
+                    <h3>Lenovo ThinkPad X1 Carbon</h3>
+                    <p>Lenovo ThinkPad X1 Carbon banyak di cari kaum +62 karena sangat ringan dan tipis namun memiliki daya tahan macam tembok cina
+                </div>
+
+            </div>
+            <div class="ads-content">
+                <img src="asset/Lenovo ThinkPad T480.png" alt="">
+                <div class="desk">
+                    <h3>Lenovo Thinkpad T480</h3>
+                    <p>lenovo ThinkPad T480 termasuk laptop sangat kuat dan tahan lama terkenal badak kerena ketangguhanya</p>
+                </div>
+            </div>
+            <div class="ads-content">
+                <img src="asset/Lenovo ThinkPad T14.png" alt="">
+                <div class="desk">
+                    <h3>Lenovo ThinkPad T14</h3>
+                    <p>Lenovo ThinkPad T14 termasuk laptop modern yang banyak di cari di kalangan penjilat laptop second karena harganya yang tergolong murah</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="product" class="product">
+        <h2>Pricelist Promo</h2>
+        <p>( Harga bisa berubah sewaktu waktu & terantung processor )</p>
+        <div class="listharga">
+            <table>
+                <tr>
+                    <th>Nomor</th>
+                    <th>Product</th>
+                    <th>Harga</th>
+                </tr>
+                <tr>
+                    <td>0001</td>
+                    <td>X1 Carbon</td>
+                    <td>4.XXX.000</td>
+                </tr>
+                <tr>
+                    <td>0002</td>
+                    <td>T480</td>
+                    <td>4.XXX.000</td>
+                </tr>
+                <tr>
+                    <td>0003</td>
+                    <td>T480s</td>
+                    <td>4.XXX.000</td>
+                </tr>
+                <tr>
+                    <td>0004</td>
+                    <td>T490</td>
+                    <td>4.XXX.000</td>
+                </tr>
+                <tr>
+                    <td>0006</td>
+                    <td>T490s</td>
+                    <td>4.XXX.000</td>
+                </tr>
+                <tr>
+                    <td>0007</td>
+                    <td>L480</td>
+                    <td>3.XXX.000</td>
+                </tr>
+                <tr>
+                    <td>0008</td>
+                    <td>L14</td>
+                    <td>5.XXX.000</td>
+                </tr>
+                <tr>
+                    <td>0009</td>
+                    <td>X280</td>
+                    <td>3.XXX.000</td>
+                </tr>
+                <tr>
+                    <td>0010</td>
+                    <td>X270</td>
+                    <td>3.XXX.000</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    
+    
+    <section id="contact" class="wrapper">
+        <p class="desk-ln">Ingin membeli tapi pertanyaan masih banyak? jangan ragu admin ramah kog, langsung hubungi kami di bawah</p>
+        <div class="contact">
+
+            <form onsubmit="sendToWhatsApp()" class="contact-form" action="">
+                <div class="anjg">
+                <h3>HUBUNGI GUWE</h3>
+                </div>  
+                <div class="input-group">
+                    <label for="nama">Nama</label>
+                    <input id="name" type="text" required>
+                </div>
+                <div class="input-group">
+                    <label  for="alamat">Alamat</label>
+                    <input id="addres" type="text" required>
+                </div>
+                <div class="input-group">
+                    <label  for="message">Pesan</label>
+                    <textarea id="pesan" rows="4" name="message" id="message" required ></textarea>
+                </div>
+                <div class="btn-send">
+                    <button type="submit">Kirim</button>
+                </div>
+            </form>
+
+        </div>
+        <footer><marquee>
+            <p>copyright@. 2025 Arisganteng 100%</p>
+        </marquee></footer>
+    </section>
+    
+    <script src="script/script.js"></script>
+</body>
+</html>

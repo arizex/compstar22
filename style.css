@@ -1,0 +1,536 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: rgb(233, 233, 233);
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.brand{
+    margin: 10px;
+}
+
+.brand img {
+    margin: 8px;
+    max-width: 100%;
+    width: 20vh;
+    transition: transform 0.3s ease-in-out;
+}
+
+.brand img:hover {
+    transform: scale(1.1)rotate(1deg);
+}
+
+header {
+    top: 0;
+    left: 0;
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 100%;
+    animation: slideDown 0.9s ease-in-out;
+    z-index: 9999;
+}
+
+
+nav a {
+    font-size: 15px;
+    margin: 5px;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    transition: .5s;
+}
+
+nav {
+    text-align: center;
+    margin: 20px;
+    position: relative; 
+}
+
+nav a:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #2196f3;
+    transition: .5s ease-in-out;
+}
+
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+nav a:hover {
+    color: #2196f3;
+}
+
+main {
+    margin-top: 12vh;
+    padding:10px;
+    text-align: center;
+}
+
+
+.slide-img img {
+    max-width: 40vh;
+    
+}
+
+.slide-img {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+.slide-text p {
+    flex: 1;
+    color: #2b445a;
+    margin: 10px;
+    font-weight: 600;
+}
+
+.slide-text h2 {
+    flex: 1;
+    color: #000000;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.slide-text p .t-a {
+    font-size: 20px;
+    font-weight: 800;
+    color: #2196f3;
+}
+
+
+#animated-text3 {
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 8vh;
+    text-shadow: 1px 1px 0 white;
+}
+
+#animated-text1,
+#animated-text2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    white-space: pre-wrap;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+#hamburger-menu img {
+    width: 25px;
+    margin: 10px;
+}
+
+#hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.close-icon {
+    display: none;
+    top: 10px;
+    width: 25px;
+    right: 20px;
+    cursor: pointer;
+    filter: invert(1);
+
+
+}
+
+.close {
+    width: 20px;
+    margin: 0 auto;
+    top: 10px;
+}
+
+
+
+@media (max-width: 768px) {
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    nav {
+        position: absolute;
+        top: 0;
+        right: -100%;
+        height: 50vh;
+        background-color: rgba(32, 36, 56, 0.922);
+        width: 200px;
+        flex-direction: column;
+        padding: 10px;
+        transition: right 0.5s ease-in-out;
+        border-radius: 10px;
+        z-index: 1;
+    }
+
+    nav.active {
+        right: 0;
+    }
+
+    nav a{
+        color: white;
+        display: block;
+        padding: 20px;
+    }
+
+    nav a:hover {
+        color: #2196f3;
+    }
+
+    nav a:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -5px;
+        width: 0;
+        height: 2px;
+        background-color: #2196f3 ;
+        transition: .5s ease-in-out;
+    }
+    
+    nav a:hover::after {
+        width: 100%;
+        left: 0;
+    }
+
+    .slide-container {
+        width: 90% !important;
+        height: 20vh !important;
+
+    }
+
+    .slide-img {
+        flex-direction: column ;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slide-img img {
+        max-width: 80%;
+    }
+
+}
+
+
+.slide-container {
+    position: relative;
+    width: 70%;
+    height: 50vh;
+    margin: 0 auto;
+    margin-top: 10vh;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.slide video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.nav {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.nav button {
+    background-color: #3333337e;
+    color: #fff;
+    border: none;
+    padding: 5px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.nav button:hover {
+    background-color: #444;
+}
+
+/* Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+.ads-product {
+    width: 85%;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #2b445a;
+    margin-top: 15vh;
+    align-items: center;
+    text-align: center;
+}
+
+.basa-basi {
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #000000;
+    color: white;
+}
+
+.basa-basi p {
+    font-weight: 700;
+}
+
+.basa-basi span {
+    color: #2196f3;
+}
+
+.ads-contains {
+    background-color: white;
+    color: #2b445a;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.ads-content {
+    margin: 10px;
+    margin-top: 50px;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+
+}
+
+.ads-content img {
+    margin: 10px;
+    width: 30vh;
+    height: auto;
+}
+
+.desk {
+    margin: 10px;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+.wrapper {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.wrapper .desk-ln {
+    margin: 15px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+.contact {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 5vh;
+    flex: 1;
+    align-items: baseline;
+    justify-content: center;
+}
+
+footer {
+    margin-top: 10vh;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.product {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    margin-top: 10vh;
+}
+
+.product p {
+    font-weight: bold;
+}
+
+.listharga {
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th, td {
+    background-color: #2196f3;
+    border: 2px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    color: white;
+    background-color: #2b445a;
+}
+
+
+
+.contact-form {
+    background-color: #2196f3;
+    padding: 50px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.contact-form .anjg {
+    color: white;
+    background-color: darkblue;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.input-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form h3 {
+    text-align: center;
+    font-size: 25px;
+}
+
+.contact-form label {
+    margin-left: 30px;
+    text-align: left;
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 85%;
+    padding: 8px;
+    margin-top: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    border: none;
+}
+
+.contact-form button {
+    width: 40%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: darkblue;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.contact-form button:hover {
+    background-color: rgb(61, 61, 141);
+}
+
+.btn-send {
+    width: 100%;
+    text-align: center;
+}
